@@ -237,11 +237,10 @@
       $(PostBuildEventDependsOn);
       PostBuildMacros;
     </PostBuildEventDependsOn>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>call iscc /Qp "$(SolutionDir)\Installers\BorderlessGaming_Standalone_Admin.iss"
+</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
+    <PreBuildEvent>copy $(SolutionDir)Languages\Languages.zip $(ProjectDir)$(OutDir)</PreBuildEvent>
   </PropertyGroup>
 </Project>
